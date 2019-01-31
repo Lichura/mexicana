@@ -1,4 +1,75 @@
 
-<div class="container">	
-<%= link_to 'Resultados', index_resultados_path %>
+
+<!-- include the calendar js and css files -->
+<%= javascript_include_tag('zabuto_calendar.min.js')%>
+<%= stylesheet_link_tag("zabuto_calendar.min.css")%>
+
+
+<!-- define the calendar element -->
+<div class="calendar-container">
+	<div id="january"></div>
 </div>
+<div class="calendar-container">
+	<div id="february"></div>
+</div>
+
+<div id="formulario"></div>
+
+<!-- initialize the calendar on ready -->
+<script type="application/javascript">
+
+
+
+var data = <%= @data.html_safe %>;
+console.log(data);
+
+
+    $(document).ready(function () {
+
+        $("#january").zabuto_calendar({
+        	data: data,
+        	action: function () {
+        		console.log(this.id)
+        		var date = $("#" + this.id).data('date');
+        		console.log(date);
+                return myDateFunction(this.id, date, false);
+            },
+            language: "es",
+        	year: 2018,
+      		month: 1,
+            show_previous: false,
+      		show_next: false,
+      		cell_border: true,
+    		show_days: true,
+    		weekstartson: 1,
+    		legend: [
+				        {type: "text", label: "Special event", badge: "00"},
+				        {type: "block", label: "Regular event", classname: "purple"},
+				        {type: "spacer"},
+				        {type: "text", label: "Bad"},
+				        {type: "list", list: ["grade-1", "grade-2", "grade-3", "grade-4"]},
+				        {type: "text", label: "Good"}
+				      ]
+        });
+        $("#february").zabuto_calendar({
+        	language: "es",
+        	year: 2018,
+      		month: 2,
+            show_previous: false,
+      		show_next: false
+        });
+
+    });
+
+
+    function myDateFunction(id, date, fromModal) {     
+        $.ajax({
+        url:'/index/test',
+        type: 'GET',
+        data: {
+        	date: date
+        }
+    });
+    }
+
+</script>

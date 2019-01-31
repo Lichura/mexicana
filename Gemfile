@@ -34,6 +34,16 @@ gem 'jbuilder', '~> 2.5'
 #speech recognition
 gem 'pocketsphinx-ruby'
 
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'bootstrap', '~> 4.2.1'
+
+gem 'icalendar', '~> 2.5', '>= 2.5.2'
+
+gem 'rails_admin', '~> 1.3'
+
+gem 'carrierwave', '~> 1.0'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.11'
