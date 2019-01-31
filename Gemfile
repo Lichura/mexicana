@@ -31,14 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#speech recognition
-gem 'pocketsphinx-ruby'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'bootstrap', '~> 4.2.1'
-
-gem 'icalendar', '~> 2.5', '>= 2.5.2'
 
 gem 'rails_admin', '~> 1.3'
 
