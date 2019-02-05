@@ -10,7 +10,7 @@
       <div class="modal-body">
 
 <p><%= @event.id %></p>
-<%= image_tag picture.picture_image.url %>
+<%= image_tag picture.picture_image.url(:print, :full), class:"modal-picture" %>
 
       </div>
     </div>
