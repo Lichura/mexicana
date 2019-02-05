@@ -42,6 +42,7 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'aws-sdk', '~> 2'
 gem 'fog', '~> 1.16'
+gem "mini_magick"
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.11'
