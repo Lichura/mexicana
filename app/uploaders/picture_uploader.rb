@@ -1,7 +1,7 @@
 class PictureUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-   ¡#include CarrierWave::MiniMagick
+  include CarrierWave::MiniMagick
 
 
   def store_dir
@@ -15,4 +15,6 @@ class PictureUploader < CarrierWave::Uploader::Base
     version :preview  { process :resize_to_fit => [128, 128] }
     version :full     { process :resize_to_fit => [1024, 768] }
   end
+
+
 end
