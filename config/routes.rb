@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "index/to_icalender" => "index#to_icalender"
   get "index/test" => "index#test"
   post "index/test" => "index#test"
-  root "index#index"
+  root "index#home"
+  get "index/index"
   get "index/resultados"
 end

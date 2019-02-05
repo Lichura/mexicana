@@ -23,4 +23,8 @@ class IndexController < ApplicationController
 	def resultados
 
 	end
+
+	def home
+
+	end
 end

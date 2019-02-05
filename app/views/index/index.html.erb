@@ -38,25 +38,13 @@ console.log(data);
         	year: 2018,
       		month: 1,
             show_previous: false,
-      		show_next: false,
+      		show_next: 13,
       		cell_border: true,
     		show_days: true,
     		weekstartson: 1,
     		legend: [
-				        {type: "text", label: "Special event", badge: "00"},
-				        {type: "block", label: "Regular event", classname: "purple"},
-				        {type: "spacer"},
-				        {type: "text", label: "Bad"},
-				        {type: "list", list: ["grade-1", "grade-2", "grade-3", "grade-4"]},
-				        {type: "text", label: "Good"}
+				        {type: "block", label: "Special event", classname: "entypo-heart"},
 				      ]
-        });
-        $("#february").zabuto_calendar({
-        	language: "es",
-        	year: 2018,
-      		month: 2,
-            show_previous: false,
-      		show_next: false
         });
 
     });
