@@ -29,4 +29,8 @@ class IndexController < ApplicationController
 	def home
 
 	end
+
+	def bonus
+		@bonus = Bonus.order("RANDOM()").first
+	end
 end

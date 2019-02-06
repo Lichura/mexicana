@@ -9,8 +9,9 @@
 <div class="calendar-container">
 	<div id="january"></div>
 </div>
-<div class="calendar-container">
-	<div id="february"></div>
+<div class="bonus">
+	<p>Random bonus</p>
+	<div id="bonus-form"></div>
 </div>
 
 <div id="formulario"></div>
@@ -34,6 +35,10 @@ console.log(data);
         		console.log(date);
                 return myDateFunction(this.id, date, false);
             },
+            nav_icon: {
+      			prev: '<i class="fa fa-chevron-circle-left"></i>',
+      			next: '<i class="fa fa-chevron-circle-right"></i>'
+    		},
             language: "es",
         	year: 2018,
       		month: 1,
@@ -42,9 +47,7 @@ console.log(data);
       		cell_border: true,
     		show_days: true,
     		weekstartson: 1,
-    		legend: [
-				        {type: "block", label: "Special event", classname: "entypo-heart"},
-				      ]
+    		legend: [{type: "block", label: "Special event", classname: "entypo-heart"}]
         });
 
     });
