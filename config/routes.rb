@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   root "index#home"
   get "index/index"
   get "index/resultados"
+  get "index/bonus"
 end

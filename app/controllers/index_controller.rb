@@ -31,6 +31,10 @@ class IndexController < ApplicationController
 	end
 
 	def bonus
-		@bonus = Bonus.order("RANDOM()").first
+		@event = Bonus.order("RANDOM()").first
+		@event.title = @event.text
+		respond_to do |format|
+        	format.js { render :action => "test" }
+      	end
 	end
 end
