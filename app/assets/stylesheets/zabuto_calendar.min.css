@@ -136,7 +136,7 @@ div.zabuto_calendar div.legend span.legend-spacer:after {
 }
 
 div.zabuto_calendar div.legend span.legend-spacer {
-	padding-left: 25px
+
 }
 
 div.zabuto_calendar ul.legend>span {
@@ -154,12 +154,11 @@ div.zabuto_calendar ul.legend li {
 	display: inline-block;
 	height: 11px;
 	width: 11px;
-	margin-left: 5px
 }
 
 div.zabuto_calendar ul.legend,
 div.zabuto_calendar ul.legend li:first-child {
-	margin-left: 7px
+
 }
 
 div.zabuto_calendar ul.legend li:last-child {
