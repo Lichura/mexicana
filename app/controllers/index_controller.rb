@@ -31,8 +31,8 @@ class IndexController < ApplicationController
 	end
 
 	def bonus
-		@event = Bonu.order("RANDOM()").first
-		@event.title = @event.text
+		@bonus = Bonu.order("RANDOM()").first
+		@event = Event.new(title: @bonus.text, picture: @bonus.picture)
 		respond_to do |format|
         	format.js { render :action => "test" }
       	end

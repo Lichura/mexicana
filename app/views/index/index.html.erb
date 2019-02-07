@@ -10,7 +10,7 @@
 	<div id="january"></div>
 </div>
 <div class="bonus">
-	<%= link_to "bonus",  index_bonus_path %>
+	<a href="" id="bonus-link">Bonus</a>
 	<div id="bonus-form"></div>
 </div>
 
@@ -26,6 +26,7 @@ console.log(data);
 
 
     $(document).ready(function () {
+
 
         $("#january").zabuto_calendar({
         	data: data,
@@ -53,6 +54,8 @@ console.log(data);
     });
 
 
+
+
     function myDateFunction(id, date, fromModal) {     
         $.ajax({
         url:'/index/test',
@@ -60,6 +63,13 @@ console.log(data);
         data: {
         	date: date
         }
+    });
+
+    $('#bonus-link').click(function(){
+    	$.ajax({
+        	url:'/index/bonus',
+        	type: 'GET'
+    	});
     });
     }
 
